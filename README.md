@@ -1,9 +1,11 @@
 # css-clock
 
-An responsive analog clock made using mostly HTML elements with CSS and vanilla javascript.
+A responsive analog clock made using HTML elements with CSS and vanilla javascript.
 
-I used javascript to set the time and set the angles for the numbers and tick marks.
+I used javascript to create the tick marks and update the clocks time every second.
 
-Then I used linear gradients to make the majority of each tick mark transparent. I used that same trick on each hand of the clock to make them different sizes.
+Then I used linear gradients to make the tick marks and to make the hands of the clock different lengths.
+
+This project came from Wes Bos' Javascript 30 challenge.
 
 ![clock](screen-shot-css-clock.png)
