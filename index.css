@@ -34,8 +34,8 @@ p {
 .clock {
   position: relative;
   margin: auto;
-  width: 25em;
-  height: 25em;
+  width: 30em;
+  height: 30em;
   border-radius: 50%;
   background-color: var(--clock-background);
   border-color: var(--clock-border);
