@@ -1,0 +1,115 @@
+:root {
+  --major-tick: #f3f3f3;
+  --minor-tick: #efefef;
+  --second-hand: #f93943;
+  --minute-hand: #070707;
+  --hour-hand: #070707;
+  --number: #f3f3f3;
+  --clock-background: rgba(255, 255, 255, 0.3);
+  --clock-border: #0b0014;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body {
+  background-image: url('gabriel-l1sqXJXBgd0-unsplash.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: flex;
+}
+
+p {
+  color: var(--number);
+}
+
+.clock {
+  position: relative;
+  margin: auto;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  background-color: var(--clock-background);
+  border-color: var(--clock-border);
+  border-width: 0.5em;
+  border-style: solid;
+}
+
+.hand {
+  width: 50%;
+  height: 0.5em;
+  top: 50%;
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: 100%;
+  border-radius: 0.5em;
+  transition: all 0.1s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.76, 1.38);
+  z-index: 2;
+}
+
+.numbers {
+  width: 100%;
+  height: 100%;
+}
+.number {
+  top: 5%;
+  left: 45%;
+  font-size: 2em;
+  transform-origin: 100%;
+  position: absolute;
+  text-shadow: 2px 2px 4px var(--hour-hand);
+  height: 90%;
+  color: var(--number);
+}
+.number-text {
+  transform: rotate(0deg);
+}
+
+.tick-marks {
+  position: absolute;
+  translate: 49%;
+  width: 100%;
+  height: 100%;
+}
+.tick {
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  transform-origin: 100%;
+}
+.major-tick {
+  background-image: linear-gradient(
+    to bottom,
+    var(--major-tick) 4%,
+    rgba(0, 0, 0, 0) 0%
+  );
+}
+.minor-tick {
+  background-image: linear-gradient(
+    to bottom,
+    var(--minor-tick) 2%,
+    rgba(0, 0, 0, 0) 0%
+  );
+}
+
+.hour {
+  background: linear-gradient(to left, var(--hour-hand) 60%, transparent 0%);
+}
+.minute {
+  background: linear-gradient(to left, var(--minute-hand) 75%, transparent 0%);
+}
+.second {
+  top: 50.5%;
+  height: 0.25em;
+  z-index: 3;
+  background: linear-gradient(to left, var(--second-hand) 90%, transparent 0%);
+}
